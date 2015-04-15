@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Photo Galleries</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+
+  <style>
+
+
+    /* show gallery on tablet-ish size and bigger */
+    figure{
+      display: none;
+    }
+
+    @media (min-width: 480px) {
+      figure{
+        display: block;
+      }
+    }
+
+
+    /* b/c we have floats in it, we need to clear */
+    figure:after{
+      display: block;
+      content: '';
+      clear: both;
+      height: 0;
+      visibility: hidden;
+    }
+
+    figcaption{
+      float: left;
+      width: 65%;
+    }
+
+    .thumbs{
+      float: left;
+      width: 33%;
+      margin-left: 2%;
+    }
+
+    .thumb{
+      display: block;
+      float: left;
+      width: 32.33333%;
+      margin-left: 1%;
+
+      /* cursor behaves like a link */
+      cursor: pointer;
+    }
+
+    figcaption{
+      font-family: "helvetica neue", helvetica, sans-serif;
+      font-size: 0.9em;
+      line-height: 1.15em;
+      color: #575757;
+    }
+
+    figcaption span{
+      font-weight: 700;
+      color: #000;
+    }
+
+    img{
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+      North Gate Gazette Times
+  </header>
+
+  <article>
+    <h1>This is a Headline</h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur laudantium officia explicabo, repellendus esse nisi sequi dolorum quis quasi. Ratione, perspiciatis molestiae quod ducimus officiis, saepe consectetur odit sint perferendis.</p>
+
+    <p>Dolor sit amet, consectetur adipisicing elit. Minima, officiis.liquid provident ipsum facere, dolor, quia officia ratione recusandae sunt quasi quam, a iusto esse reprehenderit atque maxime velit, harum nam veritatis labore. Non fuga voluptas facilis, ea atque laudantium labore deleniti architecto reprehenderit magni odit asperiores veritatis, beatae rem at ipsam cum, iusto est corporis sequi, nihil in accusamus eveniet! Rerum quasi quas sit nostrum dolorum animi molestias adipisci dolore fugiat distinctio, amet ad odit necessitatibus, placeat fuga recusandae error corrupt.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur laudantium officia explicabo, repellendus esse nisi sequi dolorum quis quasi. Ratione, perspiciatis molestiae quod ducimus officiis, saepe consectetur odit sint perferendis.</p>
+
+    <figure id="gallery" class="wide">
+      <img id="galleryImage" src="http://media.joshwilliams.com/projects/2015/teaching/responsive-images/P1070390-900.jpg">
+      <figcaption>
+        <span>Pier 23</span> lorem ipsum dolor sit amet, consectetur adipisicing elit. Et nulla est necessitatibus eos unde numquam molestias.
+      </figcaption>
+
+      <div class="thumbs">
+        <img id="thumb1" class="thumb" src="http://media.joshwilliams.com/projects/2015/teaching/responsive-images/P1070390-120.jpg">
+        <img id="thumb2" class="thumb" src="http://media.joshwilliams.com/projects/2015/teaching/responsive-images/P1140429-120.jpg">
+        <img id="thumb3" class="thumb" src="http://media.joshwilliams.com/projects/2015/teaching/responsive-images/P1070407-120.jpg">
+      </div>
+    </figure>
+
+    <p>Reiciendis aliquid provident ipsum facere, dolor, quia officia ratione recusandae sunt quasi quam, a iusto esse reprehenderit atque maxime velit, harum nam veritatis labore. Non fuga voluptas facilis, ea atque laudantium labore deleniti architecto reprehenderit magni odit asperiores veritatis, beatae rem at ipsam cum, iusto est corporis sequi, nihil in accusamus eveniet! Rerum quasi quas sit nostrum dolorum animi molestias adipisci dolore fugiat distinctio, amet ad odit necessitatibus, placeat fuga recusandae error corrupti illo.</p>
+
+    <p>Reiciendis aliquid provident ipsum facere, dolor, quia officia ratione recusandae sunt quasi quam, a iusto esse reprehenderit atque maxime velit, harum nam veritatis labore. Non fuga voluptas facilis, ea atque laudantium labore deleniti architecto reprehenderit magni odit asperiores veritatis, beatae rem at ipsam cum, iusto est corporis sequi, nihil in accusamus eveniet! Rerum quasi quas sit nostrum dolorum animi molestias adipisci dolore fugiat distinctio, amet ad odit necessitatibus, placeat fuga recusandae error corrupti illo.</p>
+
+    <p>Non fuga voluptas facilis, ea atque laudantium labore deleniti architecto reprehenderit magni odit asperiores veritatis, beatae rem at ipsam cum, iusto est corporis sequi, nihil in accusamus eveniet! Rerum quasi quas sit nostrum dolorum animi molestias adipisci dolore fugiat distinctio, amet ad odit necessitatibus, placeat fuga recusandae error corrupti illo.</p>
+
+    <p>Dolor sit amet, consectetur adipisicing elit. Minima, officiis.liquid provident ipsum facere, dolor, quia officia ratione recusandae sunt quasi quam, a iusto esse reprehenderit atque maxime velit, harum nam veritatis labore. Non fuga voluptas facilis, ea atque laudantium labore deleniti architecto reprehenderit magni odit asperiores veritatis, beatae rem at ipsam cum, iusto est corporis sequi, nihil in accusamus eveniet! Rerum quasi quas sit nostrum dolorum animi molestias adipisci dolore fugiat distinctio, amet ad odit necessitatibus, placeat fuga recusandae error corrupt.</p>
+  </article>
+
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script>
+    (function($){
+      $('#thumb1').on('click', function(){
+        $('#gallery figcaption').html('<span>Pier 23</span> lorem ipsum dolor sit amet, consectetur adipisicing elit. Et nulla est necessitatibus eos unde numquam molestias.');
+
+        $('#galleryImage').attr('src', 'http://media.joshwilliams.com/projects/2015/teaching/responsive-images/P1070390-900.jpg');
+      });
+
+      $('#thumb2').on('click', function(){
+        $('#gallery figcaption').html('<span>Twin Peaks</span> sit amet, consectetur adipisicing elit. Et nulla est necessitatibus eos lore lore unde numquam molestias.');
+
+        $('#galleryImage').attr('src', 'http://media.joshwilliams.com/projects/2015/teaching/responsive-images/P1140429-900.jpg');
+      });
+
+      $('#thumb3').on('click', function(){
+        $('#gallery figcaption').html('<span>The Embarcadero</span> Ram sit amet, consectetur adipisicing elit. Necessitatibus eos lore lore unde numquam molestias.');
+
+        $('#galleryImage').attr('src', 'http://media.joshwilliams.com/projects/2015/teaching/responsive-images/P1070407-900.jpg');
+      });
+
+    })(jQuery);
+  </script>
+</body>
+</html>

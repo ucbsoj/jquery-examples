@@ -5,6 +5,13 @@
   <title>Before / After</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
+
+  <link rel="stylesheet" href="css/twentytwenty.css">
+  <style>
+    .beforeafter img{
+        width: 100%;
+    }
+  </style>
 </head>
 
 <body>
@@ -13,13 +20,29 @@
   </header>
 
   <article>
-    <h1>This is a Headline</h1>
+    <h1>Image Comparison</h1>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur laudantium officia explicabo, repellendus esse nisi sequi dolorum quis quasi. Ratione, perspiciatis molestiae quod ducimus officiis, saepe consectetur odit sint perferendis.</p>
+
+    <div class="wide">
+        <div id="beforeafter" class="beforeafter">
+            <img alt="before" src="http://media.joshwilliams.com/projects/2015/teaching/before-after/jeep-before.jpg">
+            <img alt="after" src="http://media.joshwilliams.com/projects/2015/teaching/before-after/jeep-after.jpg">
+        </div>
+    </div>
 
     <p>Dolor sit amet, consectetur adipisicing elit. Minima, officiis.liquid provident ipsum facere, dolor, quia officia ratione recusandae sunt quasi quam, a iusto esse reprehenderit atque maxime velit, harum nam veritatis labore. Non fuga voluptas facilis, ea atque laudantium labore deleniti architecto reprehenderit magni odit asperiores veritatis, beatae rem at ipsam cum, iusto est corporis sequi, nihil in accusamus eveniet! Rerum quasi quas sit nostrum dolorum animi molestias adipisci dolore fugiat distinctio, amet ad odit necessitatibus, placeat fuga recusandae error corrupt.</p>
 
+
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur laudantium officia explicabo, repellendus esse nisi sequi dolorum quis quasi. Ratione, perspiciatis molestiae quod ducimus officiis, saepe consectetur odit sint perferendis.</p>
+
+    <div class="wide">
+        <div id="beforeafter2" class="beforeafter">
+            <img alt="before" src="http://media.joshwilliams.com/projects/2015/teaching/before-after/log-bw.jpg">
+            <img alt="after" src="http://media.joshwilliams.com/projects/2015/teaching/before-after/log-color.jpg">
+        </div>
+    </div>
+
 
     <p>Reiciendis aliquid provident ipsum facere, dolor, quia officia ratione recusandae sunt quasi quam, a iusto esse reprehenderit atque maxime velit, harum nam veritatis labore. Non fuga voluptas facilis, ea atque laudantium labore deleniti architecto reprehenderit magni odit asperiores veritatis, beatae rem at ipsam cum, iusto est corporis sequi, nihil in accusamus eveniet! Rerum quasi quas sit nostrum dolorum animi molestias adipisci dolore fugiat distinctio, amet ad odit necessitatibus, placeat fuga recusandae error corrupti illo.</p>
 
@@ -31,5 +54,12 @@
   </article>
 
   <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/jquery.event.move.js"></script>
+  <script src="js/jquery.twentytwenty.js"></script>
+  <script>
+    $(window).load(function() {
+      $('.beforeafter').twentytwenty();
+    });
+  </script>
 </body>
 </html>

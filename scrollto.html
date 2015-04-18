@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ScrollTo</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <style>
+    .hero img{
+      width: 100%;
+    }
+
+    /* center instruction box at bottom of image */
+    .instructions{
+      font-family: Arial;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 12px;
+      width: 90px;
+      margin: -90px auto 0 auto;
+
+      cursor: pointer;
+
+      /* semi-opaque */
+      color: rgba(255,255,255,0.6);
+      transition: color 0.4s ease;
+    }
+
+    .instructions:hover{
+      /* 100% white */
+      color: rgba(255,255,255,1);
+    }
+
+    .arrow{
+      width: 45px;
+      margin: 0 auto;
+      font-size: 75px;
+      line-height: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+      North Gate Gazette Times
+  </header>
+
+  <div class="hero">
+    <img src="http://media.joshwilliams.com/projects/2015/teaching/responsive-images/P1140445-2800.jpg" alt="North Beach Alley">
+    <div class="instructions">
+      Scroll Down
+
+      <!--
+      arrow: http://character-code.com/arrows-html-codes.php
+      -->
+
+      <div class="arrow">&#65516;</div>
+    </div>
+  </div>
+
+  <article>
+    <h1>This is a Headline</h1>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur laudantium officia explicabo, repellendus esse nisi sequi dolorum quis quasi. Ratione, perspiciatis molestiae quod ducimus officiis, saepe consectetur odit sint perferendis.</p>
+
+    <p>Dolor sit amet, consectetur adipisicing elit. Minima, officiis.liquid provident ipsum facere, dolor, quia officia ratione recusandae sunt quasi quam, a iusto esse reprehenderit atque maxime velit, harum nam veritatis labore. Non fuga voluptas facilis, ea atque laudantium labore deleniti architecto reprehenderit magni odit asperiores veritatis, beatae rem at ipsam cum, iusto est corporis sequi, nihil in accusamus eveniet! Rerum quasi quas sit nostrum dolorum animi molestias adipisci dolore fugiat distinctio, amet ad odit necessitatibus, placeat fuga recusandae error corrupt.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur laudantium officia explicabo, repellendus esse nisi sequi dolorum quis quasi. Ratione, perspiciatis molestiae quod ducimus officiis, saepe consectetur odit sint perferendis.</p>
+
+    <p>Reiciendis aliquid provident ipsum facere, dolor, quia officia ratione recusandae sunt quasi quam, a iusto esse reprehenderit atque maxime velit, harum nam veritatis labore. Non fuga voluptas facilis, ea atque laudantium labore deleniti architecto reprehenderit magni odit asperiores veritatis, beatae rem at ipsam cum, iusto est corporis sequi, nihil in accusamus eveniet! Rerum quasi quas sit nostrum dolorum animi molestias adipisci dolore fugiat distinctio, amet ad odit necessitatibus, placeat fuga recusandae error corrupti illo.</p>
+
+    <p>Reiciendis aliquid provident ipsum facere, dolor, quia officia ratione recusandae sunt quasi quam, a iusto esse reprehenderit atque maxime velit, harum nam veritatis labore. Non fuga voluptas facilis, ea atque laudantium labore deleniti architecto reprehenderit magni odit asperiores veritatis, beatae rem at ipsam cum, iusto est corporis sequi, nihil in accusamus eveniet! Rerum quasi quas sit nostrum dolorum animi molestias adipisci dolore fugiat distinctio, amet ad odit necessitatibus, placeat fuga recusandae error corrupti illo.</p>
+
+    <p>Non fuga voluptas facilis, ea atque laudantium labore deleniti architecto reprehenderit magni odit asperiores veritatis, beatae rem at ipsam cum, iusto est corporis sequi, nihil in accusamus eveniet! Rerum quasi quas sit nostrum dolorum animi molestias adipisci dolore fugiat distinctio, amet ad odit necessitatibus, placeat fuga recusandae error corrupti illo.</p>
+
+    <p>Dolor sit amet, consectetur adipisicing elit. Minima, officiis.liquid provident ipsum facere, dolor, quia officia ratione recusandae sunt quasi quam, a iusto esse reprehenderit atque maxime velit, harum nam veritatis labore. Non fuga voluptas facilis, ea atque laudantium labore deleniti architecto reprehenderit magni odit asperiores veritatis, beatae rem at ipsam cum, iusto est corporis sequi, nihil in accusamus eveniet! Rerum quasi quas sit nostrum dolorum animi molestias adipisci dolore fugiat distinctio, amet ad odit necessitatibus, placeat fuga recusandae error corrupt.</p>
+  </article>
+
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script>
+    $('.instructions').on('click', function(){
+      // scroll to top of our headline. Our nav bar is 46px tall,
+      // so we need to account for that, otherwise we'd scroll
+      // the headline beneath the nav bar.
+      $('html, body').animate({
+          scrollTop: $("h1").offset().top - 54
+      }, 800); /* 800 milliseconds scroll time */
+    });
+  </script>
+</body>
+</html>

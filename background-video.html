@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Background Video</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <style type="text/css">
+
+    h1,h2{
+      color: white;
+    }
+    h1{
+      font-size: 4em;
+      font-size: 4vmax;
+    }
+    h2{
+      font-size: 3em;
+      font-size: 3vmax;
+    }
+
+
+
+  .videoholder{
+    position: relative;
+    min-height: 500px;
+    height: 100%;
+    width: 100%;
+  }
+
+  .videoholder video, 
+  .videoholder img{
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    height:100%;
+    width:auto;
+  }
+
+  /* Swap width/height emphasis when browser goes past 16/9 videos. Adjust ratio to match video */
+  @media screen and (min-aspect-ratio: 16/9) { 
+    .videoholder video,
+    .videoholder img{
+        height: auto;
+        width: 100%;
+    }
+  }
+
+  /* customize the exact position of header */
+  .videoholder header{
+    background: none;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+     -webkit-transform: translate(-50%, -50%);
+             transform: translate(-50%, -50%);
+  }
+
+
+
+
+
+  </style>
+</head>
+
+<body>
+
+  <section class="videoholder">
+    <header>
+      <h1>This is a Headline</h1>
+      <h2>This is a subhead description of the project</h2>
+    </header>
+
+     <video autoplay loop muted poster="assets/traffic-bokeh.png">
+       <source src="assets/traffic-bokeh.mp4" type="video/mp4">
+       <source src="assets/traffic-bokeh.ogg" type="video/ogg">
+       <img src="assets/traffic-bokeh.png">
+     </video>
+
+  </section>
+
+  <article>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur laudantium officia explicabo, repellendus esse nisi sequi dolorum quis quasi. Ratione, perspiciatis molestiae quod ducimus officiis, saepe consectetur odit sint perferendis.</p>
+
+    <p>Dolor sit amet, consectetur adipisicing elit. Minima, officiis.liquid provident ipsum facere, dolor, quia officia ratione recusandae sunt quasi quam, a iusto esse reprehenderit atque maxime velit, harum nam veritatis labore. Non fuga voluptas facilis, ea atque laudantium labore deleniti architecto reprehenderit magni odit asperiores veritatis, beatae rem at ipsam cum, iusto est corporis sequi, nihil in accusamus eveniet! Rerum quasi quas sit nostrum dolorum animi molestias adipisci dolore fugiat distinctio, amet ad odit necessitatibus, placeat fuga recusandae error corrupt.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur laudantium officia explicabo, repellendus esse nisi sequi dolorum quis quasi. Ratione, perspiciatis molestiae quod ducimus officiis, saepe consectetur odit sint perferendis.</p>
+
+    <p>Reiciendis aliquid provident ipsum facere, dolor, quia officia ratione recusandae sunt quasi quam, a iusto esse reprehenderit atque maxime velit, harum nam veritatis labore. Non fuga voluptas facilis, ea atque laudantium labore deleniti architecto reprehenderit magni odit asperiores veritatis, beatae rem at ipsam cum, iusto est corporis sequi, nihil in accusamus eveniet! Rerum quasi quas sit nostrum dolorum animi molestias adipisci dolore fugiat distinctio, amet ad odit necessitatibus, placeat fuga recusandae error corrupti illo.</p>
+
+    <p>Reiciendis aliquid provident ipsum facere, dolor, quia officia ratione recusandae sunt quasi quam, a iusto esse reprehenderit atque maxime velit, harum nam veritatis labore. Non fuga voluptas facilis, ea atque laudantium labore deleniti architecto reprehenderit magni odit asperiores veritatis, beatae rem at ipsam cum, iusto est corporis sequi, nihil in accusamus eveniet! Rerum quasi quas sit nostrum dolorum animi molestias adipisci dolore fugiat distinctio, amet ad odit necessitatibus, placeat fuga recusandae error corrupti illo.</p>
+
+    <p>Non fuga voluptas facilis, ea atque laudantium labore deleniti architecto reprehenderit magni odit asperiores veritatis, beatae rem at ipsam cum, iusto est corporis sequi, nihil in accusamus eveniet! Rerum quasi quas sit nostrum dolorum animi molestias adipisci dolore fugiat distinctio, amet ad odit necessitatibus, placeat fuga recusandae error corrupti illo.</p>
+
+    <p>Dolor sit amet, consectetur adipisicing elit. Minima, officiis.liquid provident ipsum facere, dolor, quia officia ratione recusandae sunt quasi quam, a iusto esse reprehenderit atque maxime velit, harum nam veritatis labore. Non fuga voluptas facilis, ea atque laudantium labore deleniti architecto reprehenderit magni odit asperiores veritatis, beatae rem at ipsam cum, iusto est corporis sequi, nihil in accusamus eveniet! Rerum quasi quas sit nostrum dolorum animi molestias adipisci dolore fugiat distinctio, amet ad odit necessitatibus, placeat fuga recusandae error corrupt.</p>
+  </article>
+
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script>
+    (function($){
+
+      $(window).on("load resize", function(){
+        $(".videoholder").height($(window).height())
+      });
+
+      /* replace video with static image on mobile devices */
+      if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        var img = $(".videoholder video img");
+        $(".videoholder video").replaceWith(img);
+      }
+
+    })(jQuery);
+  </script>
+</body>
+</html>

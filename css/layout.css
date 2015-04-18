@@ -74,7 +74,11 @@ article{
 
 /* text width */
 article > p,
-article > h1{
+article > ul,
+article > h1,
+article > h2,
+article > h3,
+article > h4{
   max-width: 560px;
   margin: 0 auto 20px auto;
 }

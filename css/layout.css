@@ -1,10 +1,29 @@
+/* body basics */
+
 body{
   font-size: 16px;
   line-height: 1;
+  background-color: #fff;
+  color: #1a1a1a;
 }
+
+html.dark body{
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+
+
+
+
+/* generic type rules */
 
 a{
   color: #000;
+}
+
+html.dark a {
+    color: #fff;
 }
 
 .caption{
@@ -12,6 +31,12 @@ a{
   font-size: 0.8em;
   line-height: 1.2em;
 }
+
+
+
+
+
+/* nav */
 
 header{
   position: fixed;
@@ -29,6 +54,16 @@ header{
   text-align: center;
 }
 
+html.dark header{
+    background-color: #494949;
+}
+
+
+
+
+
+/* article container*/
+
 article{
   padding-top: 80px;
   clear: both;
@@ -43,6 +78,32 @@ article > h1{
   max-width: 560px;
   margin: 0 auto 20px auto;
 }
+
+article > p,
+article > h1{
+  font-family: Georgia, Times, serif;
+}
+
+article > h1{
+  font-size: 2.3em;
+}
+
+article > p{
+  font-size: 1em;
+  line-height: 1.55em;
+}
+
+
+@media (min-width: 768px) {
+  article > p{
+    font-size: 1.2em;
+  }
+}
+
+
+
+
+/* article art */
 
 /* wide art */
 .wide{
@@ -71,25 +132,4 @@ article > h1{
 .wide img,
 .narrow img{
   width: 100%;
-}
-
-article > p,
-article > h1{
-  font-family: Georgia, Times, serif;
-}
-
-article > h1{
-  font-size: 2.3em;
-}
-
-article > p{
-  font-size: 1em;
-  line-height: 1.55em;
-}
-
-
-@media (min-width: 768px) {
-  article > p{
-    font-size: 1.2em;
-  }
 }

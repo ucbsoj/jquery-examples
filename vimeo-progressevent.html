@@ -1,0 +1,85 @@
+<!doctype html>
+<html class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vimeo Progress Event</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <style>
+
+    /*
+    For details:
+    https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
+    */
+    .videoWrapper{
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      padding-top: 25px;
+      height: 0;
+    }
+
+    .video{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      opacity: 0.2;
+    }
+
+    .showVideo .video{
+      opacity: 1;
+    }
+
+    .videoTitle{
+      position: absolute;
+      bottom: 30%;
+      font-size: 7em;
+      max-width: 700px;
+      left: 10%;
+      transition: bottom 0.8s ease;
+    }
+
+    .showVideo .videoTitle{
+      font-size: 3em;
+      top: auto;
+      bottom: 20px;
+      color: #ccc;
+    }
+
+    p{
+      margin-top: 20px;
+      font-family: "Helvetica Neue";
+      text-align: center;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+      North Gate Gazette Times
+  </header>
+  <div class="videoWrapper">
+    <iframe class="video" id="vimeo" src="//player.vimeo.com/video/117452699??color=ffffff&title=0&byline=0&portrait=0&autoplay=1&loop=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <h1 class="videoTitle">San Francisco At Night</h1>
+  </div>
+  <p>An example using the <a href="https://github.com/jrue/Vimeo-jQuery-API">Vimeo-jQuery-API</a> plugin. Also, the <a href="https://developer.vimeo.com/player/embedding">Vimeo embed API</a>.</p>
+
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/jquery.vimeo.api.js"></script>
+  <script>
+    $(window).load(function() {
+      $('#vimeo').on('playProgress', function(ev, data){
+        if(data.seconds > 2.5){
+          $('html').addClass('showVideo');
+        } else {
+          $('html').removeClass('showVideo');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

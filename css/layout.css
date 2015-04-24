@@ -111,12 +111,14 @@ article > p{
 
 /* wide art */
 .wide{
+  display: block;
   max-width: 900px;
   margin: 0 auto 20px auto;
 }
 
 /* narrow art */
 .narrow{
+  display: block;
   width: 100%;
   margin: 0 auto 20px auto;
 }

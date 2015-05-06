@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nav</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+
+  <link rel="stylesheet" href="css/twentytwenty.css">
+  <style>
+    video,
+    .beforeafter img{
+        width: 100%;
+    }
+    
+    /* make nav button-like */
+    header li{
+      display: inline-block;
+      text-align: center;
+      padding: 4px 9px;
+      border-radius: 3px;
+      background-color: #474747;
+      cursor: pointer;
+
+      transition: 0.3s background-color ease;
+    }
+
+    /* button is "active" or hovered */
+    header li.active,
+    header li:hover{
+      background-color: #5E0C0C;
+    }
+
+    /* button is being clicked */
+    header li:active{
+      background-color: #000;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+      <ul>
+        <li>Before/After</li>
+        <li>Video</li>
+        <li>Image</li>
+      </ul>
+  </header>
+
+  <article>
+    <h1>Multi-chapter Example</h1>
+
+    <section>
+      <h2>Before/After</h2>
+      <p>An example using the <a href="http://zurb.com/playground/twentytwenty">TwentyTwenty</a> plugin.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur laudantium officia explicabo, repellendus esse nisi sequi dolorum quis quasi. Ratione, perspiciatis molestiae quod ducimus officiis, saepe consectetur odit sint perferendis.</p>
+
+      <div class="wide">
+          <div id="beforeafter" class="beforeafter">
+              <img alt="before" src="http://media.joshwilliams.com/projects/2015/teaching/before-after/jeep-before.jpg">
+              <img alt="after" src="http://media.joshwilliams.com/projects/2015/teaching/before-after/jeep-after.jpg">
+          </div>
+      </div>
+  
+      <p>Dolor sit amet, consectetur adipisicing elit. Minima, officiis.liquid provident ipsum facere, dolor, quia officia ratione recusandae sunt quasi quam, a iusto esse reprehenderit atque maxime velit, harum nam veritatis labore. Non fuga voluptas facilis, ea atque laudantium labore deleniti architecto reprehenderit magni odit asperiores veritatis, beatae rem at ipsam cum, iusto est corporis sequi, nihil in accusamus eveniet! Rerum quasi quas sit nostrum dolorum animi molestias adipisci dolore fugiat distinctio, amet ad odit necessitatibus, placeat fuga recusandae error corrupt.</p>
+
+      <div class="wide">
+          <div id="beforeafter2" class="beforeafter">
+              <img alt="before" src="http://media.joshwilliams.com/projects/2015/teaching/before-after/log-bw.jpg">
+              <img alt="after" src="http://media.joshwilliams.com/projects/2015/teaching/before-after/log-color.jpg">
+          </div>
+      </div>
+    </section>
+
+
+    <section>
+      <h2>Video</h2>
+
+      <p>Reiciendis aliquid provident ipsum facere, dolor, quia officia ratione recusandae sunt quasi quam, a iusto esse reprehenderit atque maxime velit, harum nam veritatis labore. Non fuga voluptas facilis, ea atque laudantium labore deleniti architecto reprehenderit magni odit asperiores veritatis, beatae rem at ipsam cum, iusto est corporis sequi, nihil in accusamus eveniet! Rerum quasi quas sit nostrum dolorum animi molestias adipisci dolore fugiat distinctio, amet ad odit necessitatibus, placeat fuga recusandae error corrupti illo.</p>
+
+      
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur laudantium officia explicabo, repellendus esse nisi sequi dolorum quis quasi. Ratione, perspiciatis molestiae quod ducimus officiis, saepe consectetur odit sint perferendis.</p>
+
+      <div class="wide">
+        <video autoplay muted loop src="http://media.joshwilliams.com/video/2012/cappadocia-720p.mp4"></video>
+      </div>
+
+      <p>Non fuga voluptas facilis, ea atque laudantium labore deleniti architecto reprehenderit magni odit asperiores veritatis, beatae rem at ipsam cum, iusto est corporis sequi, nihil in accusamus eveniet! Rerum quasi quas sit nostrum dolorum animi molestias adipisci dolore fugiat distinctio, amet ad odit necessitatibus, placeat fuga recusandae error corrupti illo.</p>      
+    </section>
+
+
+    <section>
+      <h2>Image</h2>
+      
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur laudantium officia explicabo, repellendus esse nisi sequi dolorum quis quasi. Ratione, perspiciatis molestiae quod ducimus officiis, saepe consectetur odit sint perferendis.</p>
+
+      <figure class="wide">
+        <img src="http://media.joshwilliams.com/projects/2015/teaching/responsive-images/P1070390-900.jpg">
+        <figcaption>
+          <span>Pier 23</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et nulla est necessitatibus eos unde numquam molestias.
+        </figcaption>
+      </figure>
+  
+      <p>Reiciendis aliquid provident ipsum facere, dolor, quia officia ratione recusandae sunt quasi quam, a iusto esse reprehenderit atque maxime velit, harum nam veritatis labore. Non fuga voluptas facilis, ea atque laudantium labore deleniti architecto reprehenderit magni odit asperiores veritatis, beatae rem at ipsam cum, iusto est corporis sequi, nihil in accusamus eveniet! Rerum quasi quas sit nostrum dolorum animi molestias adipisci dolore fugiat distinctio, amet ad odit necessitatibus, placeat fuga recusandae error corrupti illo.</p>
+
+    </section>
+
+    <h2>Remainder of Article</h2>
+
+    <p>Reiciendis aliquid provident ipsum facere, dolor, quia officia ratione recusandae sunt quasi quam, a iusto esse reprehenderit atque maxime velit, harum nam veritatis labore. Non fuga voluptas facilis, ea atque laudantium labore deleniti architecto reprehenderit magni odit asperiores veritatis, beatae rem at ipsam cum, iusto est corporis sequi, nihil in accusamus eveniet! Rerum quasi quas sit nostrum dolorum animi molestias adipisci dolore fugiat distinctio, amet ad odit necessitatibus, placeat fuga recusandae error corrupti illo.</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur laudantium officia explicabo, repellendus esse nisi sequi dolorum quis quasi. Ratione, perspiciatis molestiae quod ducimus officiis, saepe consectetur odit sint perferendis.</p>
+
+    <p>Dolor sit amet, consectetur adipisicing elit. Minima, officiis.liquid provident ipsum facere, dolor, quia officia ratione recusandae sunt quasi quam, a iusto esse reprehenderit atque maxime velit, harum nam veritatis labore. Non fuga voluptas facilis, ea atque laudantium labore deleniti architecto reprehenderit magni odit asperiores veritatis, beatae rem at ipsam cum, iusto est corporis sequi, nihil in accusamus eveniet! Rerum quasi quas sit nostrum dolorum animi molestias adipisci dolore fugiat distinctio, amet ad odit necessitatibus, placeat fuga recusandae error corrupt.</p>
+
+  </article>
+
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/jquery.event.move.js"></script>
+  <script src="js/jquery.twentytwenty.js"></script>
+  <script src="js/jquery.scrollstory.js"></script>
+  <script>
+    $(window).load(function() {
+      $('.beforeafter').twentytwenty();
+
+      // scroll story maintains the nav bar as the page scrolls into the various
+      // sections of the page
+      var scrollStory = $('article').scrollStory({
+        content: 'section',
+        triggerOffset: $('header').outerHeight() + 30, // the trigger is the distance from the top of the page to denote when sections have changed. We want it to be the height of the nav bar + about 30 pixels.
+        scrollOffset: $('header').outerHeight() + 30, // this is how far to auto-scroll the items when a nav button is clicked. usually matches the trigger point.
+        debug: true, // set this to false to turn off the red line, which indicates where the trigger point is/
+        autoActivateFirstItem: true,
+        itemfocus: function(ev, item){
+
+          // reset all nav buttons to unactive by removing the 'active' class.
+          $('header li').removeClass('active');
+
+          // highlight the correct button based on its 'index' by adding the 'active' class.
+          // 
+          // the 'index' is a zero-based counter. so the first nav item is "0", the second is "1", etc. Here, 
+          // we're telling jQuery to select all the nav buttons, but then only use a single one with the '.eq()' method. We pass
+          // in the zero-based index we want to use. So if the first item in our list to have the class
+          // 'active' added, we'd say $('header li').eq(0).addClass('active'). jQuery and ScrollStory, like 
+          // most languages and libraries in computer science, both start counting at zero. 
+          $('header li').eq(item.index).addClass('active');
+        }
+      }).data('plugin_scrollStory');
+
+
+      // clicks on the nav elements shoudl instruct scrollstory 
+      // to scroll the page down to the correct section
+      $('header li').on('click', function(){
+        
+        // using a zero-based index counting system, which of the 
+        // nav buttons was just clicked? If the first button, this
+        // value will be '0', if the second, it'll be '1', etc.
+        var buttonIndex = $('header li').index($(this));
+
+        // scrollstory has a builtin method called 'index()' that does one
+        // of two things:
+        // 
+        // if you don't pass anything in, it'll retrieve the current 'active'
+        // item's zero-based index. 
+        // 
+        // If you pass in a zero-based index, it'll scroll the page to that item.
+        // That's what we want to do. 
+        scrollStory.index(buttonIndex);
+      });
+      
+
+    });
+  </script>
+</body>
+</html>
